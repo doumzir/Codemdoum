@@ -1,0 +1,33 @@
+#Project{
+  .chooseCategory{
+    font-size: 18px;
+    text-align: left;
+    font-weight: bold;
+  }
+  .projectContainer{
+    display: flex;
+    gap: 30px 40px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  span:first-child{
+
+    transform: scale(-1, 1);
+  }
+  .carrousel{
+
+   font-size: 18px;
+    font-weight: bold;
+    width: 130px;
+    margin: 45px auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  span{
+    cursor: pointer;
+  }
+
+  .noneCarrousel{
+    display: none;
+  }
+}
