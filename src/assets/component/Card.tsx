@@ -1,7 +1,7 @@
-import { PropsWithChildren,useState } from 'react';
+import { PropsWithChildren } from 'react';
 import "../style/card.scss";
 import ButtonType from "./Button";
-import Modal from "./Modal";
+
 
 
 type CardProps = PropsWithChildren<{

@@ -1,0 +1,29 @@
+header{
+display: flex;
+  justify-content: space-between;
+  nav{
+    width: 70%;
+  }
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    list-style: none;
+    a{
+      color: white;
+      padding: 8px 10px;
+      border-radius: 10px;
+    }
+    a:hover{
+      color: white;
+      background-color: #1ABC9C;
+
+    }
+    li:last-child a:hover{
+
+      background-color: #9B59B6;}
+  }
+
+
+
+}

@@ -1,0 +1,37 @@
+#Contact{
+  h2{
+    margin-bottom:17px ;
+
+    padding: 0 50px;
+  }
+  form{
+    background-color: white;
+    padding: 50px 0;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    border-radius: 20px;
+    text-align: left;
+    .elementForm{
+      display: flex;
+      flex-direction: column;
+padding: 0 50px;
+    }
+    button{padding: 0}
+    hr{
+      margin: 9px 0 ;
+
+      border: solid 1px black;
+    }
+label{
+  color:#908F95;
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+    #email{
+      color:#9B59B6;
+      font-size: 14px;
+    }
+  }
+}

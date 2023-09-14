@@ -7,20 +7,27 @@ import Modal from "./Modal";
 type textButton = {
     text: number,
     id: number,
-    url: string | undefined
+    url: string | undefined ,
 }
 const ButtonType = ({text, url, id}: textButton) => {
     const [showModal, setShowModal] = useState(false)
     console.log(showModal)
     return (
+        <>
+            {
+                text == 3 ?  <a className="button"
+                                href="#Project" >see my projects</a> :
+
         <div>
             {text == 1 ? <a target="_blank" className="button"
                             href={url}>see Website</a> : <><button
                 onClick={() => setShowModal(true)}
                 className="button">More Detail</button>
-            {showModal && createPortal(<Modal id={id} />, document.body)}</>}
+            {showModal && createPortal(<Modal closeModal={()=> setShowModal(false)} id={id} />, document.body)}</>}
 
-        </div>
+        </div> }
+        </>
+
     );
 };
 

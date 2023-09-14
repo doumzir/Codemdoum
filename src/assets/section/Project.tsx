@@ -84,8 +84,8 @@ console.log(projectDisplay)
         setSelectedCategory(category);
     };
     return (
-        <div id="Project">
-            <TextType Title={"Look at this 👀"}>Some of my recent projects professionals and personals/casual</TextType>
+        <section id="Project">
+            <TextType presentation={false} Title={"Look at this 👀"}>Some of my recent projects professionals and personals/casual</TextType>
             <p className="chooseCategory">Choose your category {icon}</p>
             <Filter stateCategory={handleCategoryChange} selectedCategory={selectedCategory}/>
             <div className="projectContainer">
@@ -95,7 +95,7 @@ console.log(projectDisplay)
                 onClick={() => indexArray - 4 > 0 ? setIndexArray(indexArray - 4) : setIndexArray(projectDisplay.length + (4 - (projectDisplay.length % 4)))}>{carrouselIcon}</span>{Math.floor(indexArray / 4)}/{Math.floor((projectDisplay.length + 4) / 4)}<span
                 onClick={() => indexArray < projectDisplay.length ? setIndexArray(indexArray + 4) : setIndexArray(4)}>{carrouselIcon}</span>
             </p>
-        </div>
+        </section>
     );
 }
 
