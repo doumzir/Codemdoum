@@ -19,25 +19,25 @@ const Contact = () => {
                     <h2>Contact me</h2>
                     <div className='elementForm'>
                         <label htmlFor="name">Name or Company</label>
-                        <input type="text" name="name" id="name"/>
+                        <input type="text" name="name" id="name" required/>
                     </div><hr/>
                     <div className='elementForm'>
 
                         <label htmlFor="Email">Email</label>
-                        <input type="email" name="email" id="email"/></div><hr/>
+                        <input type="email" name="email" id="email" required/></div><hr/>
                     <div className='elementForm'>
 
                         <label htmlFor="subject">Interested for ?</label>
-                        <input type="text" name="subject" id="subject"/></div><hr/>
+                        <input type="text" name="subject" id="subject" required/></div><hr/>
                     <div className='elementForm'>
                         <label htmlFor="message">Message</label>
                         <textarea id="message" name="message" rows={15}></textarea>
                     </div><hr/>
-                    <div><label htmlFor="checkbox">I consent to the use of my data for the purpose of contacting me</label>
-                        <input type="checkbox" name="checkbox" id="checkbox"/></div>
+                    <div className="boxCheckBox"><input type="checkbox" name="checkbox" id="checkbox"/><label htmlFor="checkbox">I consent to the use of my data for the purpose of contacting me</label>
+                        </div>
 
-                    <div><label htmlFor="button">Send</label>
-                    <button style={{display:'flex', width:'fit-content', height:'fit-content', backgroundColor:'white'}}>{mail}</button></div>
+                    <div id="SendForm" ><label htmlFor="button">Send</label>
+                    <button type="submit" id="button" name="button" style={{display:'flex', width:'fit-content', height:'fit-content', backgroundColor:'white'}}>{mail}</button></div>
                 </form>
             </div>
         </section>

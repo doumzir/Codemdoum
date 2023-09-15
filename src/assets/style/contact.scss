@@ -1,37 +1,89 @@
-#Contact{
-  h2{
-    margin-bottom:17px ;
+#Contact {
+  h2 {
+    margin-bottom: 17px;
 
     padding: 0 50px;
   }
-  form{
+
+  form {
+    position: relative;
     background-color: white;
-    padding: 50px 0;
+    padding: 50px 0 100px;
     color: black;
     display: flex;
     flex-direction: column;
-    width: 30%;
+    min-width: 415px;
+    width: 40%;
     border-radius: 20px;
     text-align: left;
-    .elementForm{
+
+    .elementForm {
       display: flex;
       flex-direction: column;
-padding: 0 50px;
+      padding: 0 50px;
     }
-    button{padding: 0}
-    hr{
-      margin: 9px 0 ;
+
+    input, textarea {
+      border: 1px solid rgba(75, 0, 130, 0);
+      min-height: 30px;
+      font-size: 14px;
+      padding: 5px 5px 10px;
+    }
+  ;
+
+    button {
+      padding: 0
+    }
+
+    hr {
+      margin: 9px 0;
 
       border: solid 1px black;
     }
-label{
-  color:#908F95;
-  font-size: 14px;
-  margin-bottom: 3px;
-}
-    #email{
-      color:#9B59B6;
+
+    label {
+      color: #908F95;
+      font-size: 14px;
+      margin-bottom: 3px;
+    }
+
+    .boxCheckBox {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 10px;
+    }
+
+    #checkbox {
+      display: inline-block;
+      border-radius: 2px;
+      border: 1px solid red;
+      width: 45px;
+      height: 45px;
+      cursor: pointer;
+      margin-right: 10px;
+
+    }
+
+    #email {
+      color: #9B59B6;
       font-size: 14px;
     }
+    #SendForm{
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      cursor: pointer;
+      label{
+        cursor: pointer;
+      font-size: 15px;
+      color: #9B59B6}
+    }
+  }
+  input:valid{
+    border: #9B59B6 1px solid;
   }
 }
