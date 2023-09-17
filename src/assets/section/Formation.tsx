@@ -24,7 +24,7 @@ const Formation = () => {
 
         }
     ]
-    const Myproject = Formations.map((formation)=> <MyFormation key={formation.id} id={formation.id} img={formation.img} name={formation.name} title={formation.title} content={formation.content} />)
+    const Myproject = Formations.map((formation)=> <MyFormation key={formation.id}  img={formation.img} name={formation.name} title={formation.title} content={formation.content} />)
     return (
         <section id="Education">
             <TextType presentation={false} Title="It's getting hot ! 👨‍🎓">Allow me to present my educational journey,

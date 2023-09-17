@@ -38,7 +38,7 @@ const Experience = () => {
     const ProfessionList = profession.map(profession => (<ExperienceCard plants={profession.Plants} key={profession.years[0]} logo={profession.logo} task={profession.task} job={profession.job} nbrYears={profession.years} color={profession.color}>{profession.text}</ExperienceCard>))
     return (
         <section id="Experience">
-            <TextType presentation={false} Title="Where i cooked ? 💼">My experiences in differents companies</TextType>
+            <TextType presentation={false} Title="Where I cooked ? 💼">My experiences in differents companies</TextType>
            <div className="allProfession">{ProfessionList}</div>
         </section>
     );

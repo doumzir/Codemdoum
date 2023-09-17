@@ -1,11 +1,40 @@
 #Contact {
-  h2 {
-    margin-bottom: 17px;
+  #Contactform{
+  display: grid;
+    height: 900px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16px;
 
-    padding: 0 50px;
-  }
+  #MeContact{
+    grid-row: 2/3;
+    grid-column: 1;
+    height: fit-content;
+
+    img {
+      object-fit: cover;
+      border-radius: 100%;
+      border: 4px solid #3498DB;
+    }
+
+p{
+
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+  margin-top: 23px;
+}
+
+
+}
+    #GoodByeContact{
+      grid-row: 4/5;
+      grid-column: 1;
+    }
 
   form {
+grid-column: 2;
+    grid-row: 1/6;
     position: relative;
     background-color: white;
     padding: 50px 0 100px;
@@ -16,7 +45,10 @@
     width: 40%;
     border-radius: 20px;
     text-align: left;
-
+h2{
+  padding-left: 50px;
+  margin-bottom: 35px;
+}
     .elementForm {
       display: flex;
       flex-direction: column;
@@ -86,4 +118,4 @@
   input:valid{
     border: #9B59B6 1px solid;
   }
-}
+}}

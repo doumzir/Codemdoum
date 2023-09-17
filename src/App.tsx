@@ -8,7 +8,7 @@ import Experience from "./assets/section/Experience";
 import Formation from "./assets/section/Formation";
 import Contact from "./assets/section/Contact";
 import Header from "./assets/section/Header";
-
+import Footer from "./assets/section/Footer";
 
 function App() {
 
@@ -22,7 +22,9 @@ function App() {
         <Experience />
         <Formation />
         <Contact />
+        <Footer/>
     </>
+
   )
 }
 
