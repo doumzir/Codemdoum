@@ -5,6 +5,9 @@
   border-radius: 20px;
   padding: 20px;
   min-height: 600px;
+  @media screen and (max-width:1024px){
+   width: 49%;
+  }
 
   h3{
     font-size: 30px;

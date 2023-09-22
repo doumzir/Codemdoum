@@ -1,14 +1,29 @@
 header{
 display: flex;
   justify-content: space-between;
+  img{
+
+    @media screen and (max-width:1024px){
+      width: 200px;
+      object-fit: contain;
+    }
+    @media screen and (max-width:780px){
+      width: 180px;
+      object-fit: contain;
+    }}
   nav{
     width: 70%;
+
+
   }
   nav ul {
     display: flex;
     justify-content: space-between;
     width: 100%;
     list-style: none;
+    @media screen and (max-width:720px){
+     display: none;
+    }
     a{
       color: white;
       padding: 8px 10px;

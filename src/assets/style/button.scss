@@ -9,6 +9,16 @@
   width: 337px;
   padding: 15px ;
   color: white;
+  @media screen and (max-width:1024px){
+   width: 220px;
+    padding: 13px ;
+    font-size: 20px;
+  }
+  @media screen and (max-width:780px){
+    width: 200px;
+    padding: 10px ;
+    font-size: 18px;
+  }
 }
 .button:hover{
   color: white;
