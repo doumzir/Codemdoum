@@ -5,5 +5,7 @@ footer{
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-
+@media screen and (max-width: 780px) {
+  margin-top: 10px;
+}
 }

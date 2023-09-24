@@ -5,11 +5,18 @@
   justify-content: center;
   @media screen and (max-width:780px){
     flex-wrap: wrap;
-    max-width: 200px;
+    max-width: 230px;
+    width: 100%;
     margin: 0 auto 20px auto;
   }
   .cls-1{fill:#fff;}.cls-1,.cls-2{stroke-width:0px;}.cls-2{fill:#0a66c2;}
   a{
+    svg{
+      @media screen and (max-width: 780px) {
+        width: 43px;
+
+      }
+    }
     margin: 0 5px;
   }
 }

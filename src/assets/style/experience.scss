@@ -4,4 +4,12 @@
   display: flex;
   flex-wrap: wrap;
   gap: 12px}
+  hr{
+    display: none;
+    @media screen and (max-width: 780px) {
+      width: 80%;
+      display: block;
+      margin: 10px auto;
+    }
+  }
 }

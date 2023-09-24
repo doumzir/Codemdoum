@@ -15,8 +15,9 @@
     font-size: 20px;
   }
   @media screen and (max-width:780px){
-    width: 200px;
-    padding: 10px ;
+    width:100%;
+    max-width: 225px;
+    padding: 10px 15px ;
     font-size: 18px;
   }
 }

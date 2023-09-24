@@ -10,7 +10,8 @@ type PropsCardExp = PropsWithChildren<{
 }>
 function ExperienceCard({plants, job, nbrYears, children, task, logo, color} : PropsCardExp) {
     const taskList = task.map(task => (<li>{task}</li>))
-    return (
+    return (<>
+
         <div className="experienceCard" style={{background:`linear-gradient(180deg, ${color} 0% , ${color}33 25% , ${color}00 100%)`}}>
             <h3>{plants}</h3>
             <img src={logo}  height="100px"/>
@@ -18,7 +19,10 @@ function ExperienceCard({plants, job, nbrYears, children, task, logo, color} : P
             <div className="yearsExp"><p>{nbrYears[0]}</p>-<p>{nbrYears[1]}</p></div>
             <p>{children}</p>
             <ul>{taskList}</ul>
+
  </div>
+            <hr/>
+        </>
     );
 }
 

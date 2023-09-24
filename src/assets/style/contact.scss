@@ -2,9 +2,16 @@
   #Contactform{
   display: grid;
     height: 900px;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
     grid-template-columns: 1fr 1fr;
     grid-gap: 16px;
+    @media screen and (max-width: 780px){
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-columns: 1fr;
+      height: fit-content;
+      grid-gap: 10px;
+
+    }
     p{
 
       text-align: center;
@@ -16,6 +23,12 @@
     grid-row: 2/3;
     grid-column: 1;
     height: fit-content;
+    @media screen and (max-width: 780px){
+      grid-row: 1;
+      grid-column: 1;
+      padding-top: 80px;
+
+    }
 
     img {
       object-fit: cover;
@@ -34,11 +47,17 @@
     #GoodByeContact{
       grid-row: 4/5;
       grid-column: 1;
+      @media screen and (max-width: 780px){
+        grid-row:4;
+        grid-column: 1;
+
+      }
       img{
         @media screen and (max-width:1024px){
           width: 260px;
           height: 260px;
         }
+
       }
     }
 
@@ -55,6 +74,14 @@ grid-column: 2;
     width: 40%;
     border-radius: 20px;
     text-align: left;
+    @media screen and (max-width: 780px){
+      grid-row: 2/4;
+      grid-column: 1;
+      height: fit-content;
+      width: 90%;
+      margin: 0 auto;
+      min-width: 200px;
+    }
 h2{
   padding-left: 50px;
   margin-bottom: 35px;

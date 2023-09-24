@@ -28,6 +28,9 @@ display: flex;
       color: white;
       padding: 8px 10px;
       border-radius: 10px;
+      @media screen and (max-width:1024px){
+        padding: 8px 5px;
+      }
     }
     a:hover{
       color: white;

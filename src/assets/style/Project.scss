@@ -9,6 +9,11 @@
     gap: 30px 40px;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    overflow-x: hidden;
+    padding: 20px 0;
+    @media screen and (max-width: 780px) {
+      padding-right: 40px;
+    }
   }
   span:first-child{
 
