@@ -1,8 +1,8 @@
 import TextType from "../component/TextType";
 import '../style/contact.scss'
 
-import {useRef, useState} from 'react';
-import emailjs from '@emailjs/browser';
+import {FormEventHandler, MutableRefObject, useRef, useState} from 'react';
+import emailjs, {EmailJSResponseStatus} from '@emailjs/browser';
 import me from '../image/me.jpg'
 import LinkSocialMedia from "../component/LinkSocialMedia";
 import byeBYe from '../image/byeBye.svg'
@@ -14,14 +14,14 @@ const Contact = () => {
     const [message, setMessage] = useState('')
     const [FormEnd, setFormEnd] = useState(false)
 
-    const form = useRef();
+    const form:MutableRefObject<any> = useRef();
 
 
-    const sendEmail = (e: any) => {
+    const sendEmail: FormEventHandler<HTMLFormElement> = (e:React.ChangeEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         emailjs.sendForm('service_6530sca', 'template_blitepu', form.current, '70cbnkcrhynLsAZd6')
-            .then((result: Response) => {
+            .then((result: EmailJSResponseStatus) => {
                 if (result.status == 200) {
                     setFormEnd(true)
 
@@ -31,7 +31,7 @@ const Contact = () => {
                     console.log(result.text);
                 }
 
-            }, (error: any) => {
+            }, (error: EmailJSResponseStatus) => {
                 alert("Oops! Something went wrong. Please try to join me next time or contact me directly at demdoum.yanis@hotmail.com");
                 console.log(error.text);
             });
