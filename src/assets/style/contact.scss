@@ -1,59 +1,61 @@
 #Contact {
-  #Contactform{
-  display: grid;
+  #Contactform {
+    display: grid;
     height: 900px;
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns: 1fr 1fr;
     grid-gap: 16px;
-    @media screen and (max-width: 780px){
+    @media screen and (max-width: 780px) {
       grid-template-rows: repeat(4, 1fr);
       grid-template-columns: 1fr;
       height: fit-content;
       grid-gap: 10px;
 
     }
-    p{
+
+    p {
 
       text-align: center;
       font-size: 30px;
       font-weight: 500;
       margin-top: 23px;
     }
-  #MeContact{
-    grid-row: 2/3;
-    grid-column: 1;
-    height: fit-content;
-    @media screen and (max-width: 780px){
-      grid-row: 1;
+
+    #MeContact {
+      grid-row: 2/3;
       grid-column: 1;
-      padding-top: 80px;
+      height: fit-content;
+      @media screen and (max-width: 780px) {
+        grid-row: 1;
+        grid-column: 1;
+        padding-top: 80px;
 
-    }
-
-    img {
-      object-fit: cover;
-      border-radius: 100%;
-      border: 4px solid #3498DB;
-      @media screen and (max-width:1024px){
-        width: 260px;
-        height: 260px;
       }
+
+      img {
+        object-fit: cover;
+        border-radius: 100%;
+        border: 4px solid #3498DB;
+        @media screen and (max-width: 1024px) {
+          width: 260px;
+          height: 260px;
+        }
+      }
+
+
     }
 
-
-
-
-}
-    #GoodByeContact{
+    #GoodByeContact {
       grid-row: 4/5;
       grid-column: 1;
-      @media screen and (max-width: 780px){
-        grid-row:4;
+      @media screen and (max-width: 780px) {
+        grid-row: 4;
         grid-column: 1;
 
       }
-      img{
-        @media screen and (max-width:1024px){
+
+      img {
+        @media screen and (max-width: 1024px) {
           width: 260px;
           height: 260px;
         }
@@ -61,98 +63,164 @@
       }
     }
 
-  form {
-grid-column: 2;
-    grid-row: 1/6;
-    position: relative;
-    background-color: white;
-    padding: 50px 0 100px;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    min-width: 415px;
-    width: 40%;
-    border-radius: 20px;
-    text-align: left;
-    @media screen and (max-width: 780px){
-      grid-row: 2/4;
-      grid-column: 1;
-      height: fit-content;
-      width: 90%;
-      margin: 0 auto;
-      min-width: 200px;
-    }
-h2{
-  padding-left: 50px;
-  margin-bottom: 35px;
-}
-    .elementForm {
+    #SendGood, form {
+
+      grid-column: 2;
+      grid-row: 1/6;
+      position: relative;
+      padding: 50px 0 100px;
       display: flex;
       flex-direction: column;
-      padding: 0 50px;
+      min-width: 415px;
+      width: 40%;
+      border-radius: 20px;
+      text-align: left;
+      -webkit-box-shadow: 0 5px 10px 0 rgba(0,0,0,0.25);
+      box-shadow: 0 5px 10px 0 rgba(0,0,0,0.25);
     }
 
-    input, textarea {
-      border: 1px solid rgba(75, 0, 130, 0);
-      min-height: 30px;
-      font-size: 14px;
-      padding: 5px 5px 10px;
-    }
-  ;
+    #SendGood {
+      background-color: #9B59B6;
+      color: white;
+      justify-content: space-between;
+      padding: 25px;
+      position: relative;
+      @media screen and (max-width: 780px) {
+        grid-row: 2/4;
+        grid-column: 1;
 
-    button {
-      padding: 0
-    }
+        width: 90%;
+        margin: 0 auto;
+        min-width: 200px;
+      }
+      h3{
+        font-size: 67px;
+        max-width: 225px;
+      }
+      hr{
+        position: absolute;
+        top: 45%;
+        right: 0;
+        width: 100%;
 
-    hr {
-      margin: 9px 0;
-
-      border: solid 1px black;
-    }
-
-    label {
-      color: #908F95;
-      font-size: 14px;
-      margin-bottom: 3px;
-    }
-
-    .boxCheckBox {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      padding: 10px;
-    }
-
-    #checkbox {
-      display: inline-block;
-      border-radius: 2px;
-      border: 1px solid red;
-      width: 45px;
-      height: 45px;
-      cursor: pointer;
-      margin-right: 10px;
-
-    }
-
-    #email {
-      color: #9B59B6;
-      font-size: 14px;
-    }
-    #SendForm{
-      position: absolute;
-      bottom: 15px;
-      right: 15px;
-      display: flex;
-      align-items: center;
-      gap: 25px;
-      cursor: pointer;
-      label{
+      }
+      #buttonReturnForm{
         cursor: pointer;
-      font-size: 15px;
-      color: #9B59B6}
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 315px;
+        width: 100%;
+        align-self: flex-end;
+        padding: 10px;
+        border-radius: 20px;
+        background-color: #9B59B6;
+        color: white;
+        -webkit-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+        box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+        p{
+          margin: 0;
+          font-size: 16px;
+          font-weight: normal;
+
+        }
+        @media screen and (max-width: 780px) {
+       max-width: 235px;
+          height: 40px;
+
+        }
+      }
+    }
+
+    form {
+      background-color: white;
+      color: black;
+      @media screen and (max-width: 780px) {
+        grid-row: 2/4;
+        grid-column: 1;
+        height: fit-content;
+        width: 90%;
+        margin: 0 auto;
+        min-width: 200px;
+      }
+
+      h2 {
+        padding-left: 50px;
+        margin-bottom: 35px;
+      }
+
+      .elementForm {
+        display: flex;
+        flex-direction: column;
+        padding: 0 50px;
+      }
+
+      input, textarea {
+        border: 1px solid rgba(75, 0, 130, 0);
+        min-height: 30px;
+        font-size: 14px;
+        padding: 5px 5px 10px;
+      }
+    ;
+
+      button {
+        padding: 0
+      }
+
+      hr {
+        margin: 9px 0;
+
+        border: solid 1px black;
+      }
+
+      label {
+        color: #908F95;
+        font-size: 14px;
+        margin-bottom: 3px;
+      }
+
+      .boxCheckBox {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 10px;
+      }
+
+      #checkbox {
+        display: inline-block;
+        border-radius: 2px;
+        border: 1px solid red;
+        width: 45px;
+        height: 45px;
+        cursor: pointer;
+        margin-right: 10px;
+
+      }
+
+      #email {
+        color: #9B59B6;
+        font-size: 14px;
+      }
+
+      #SendForm {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        cursor: pointer;
+
+        label {
+          cursor: pointer;
+          font-size: 15px;
+          color: #9B59B6
+        }
+      }
+    }
+
+    input:valid {
+      border: #9B59B6 1px solid;
     }
   }
-  input:valid{
-    border: #9B59B6 1px solid;
-  }
-}}
+}
