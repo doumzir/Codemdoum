@@ -3,114 +3,38 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faChevronRight} from "@fortawesome/free-solid-svg-icons";
 import {faCircleXmark} from '@fortawesome/free-regular-svg-icons';
 import {useState} from "react";
-
+import loading from '../image/load/loading.gif'
+/*
 const gallery = Object.values(import.meta.glob('..//image/project/Kasa/*.{png,jpg,jpeg,PNG,JPEG,webp}', {
     eager: true,
     as: 'url'
-}))
+}))*/
 
 const carrouselIcon = <FontAwesomeIcon icon={faChevronRight}/>
 const xmark = <FontAwesomeIcon icon={faCircleXmark} style={{color: "#ffffff",}}/>
 type modalProps = {
     id: number;
     closeModal: () => void;
+    url:string
+    description:string
 }
-type ProjectsType = {
-    id: number,
-    title: string,
-    text: string,
-    button: number,
-    img: string | string[],
-    description: string,
-    url:string,
-    techno: string[],
-}[]
 
-type theProjectype = {
-    id: number,
-    title: string,
-    text: string,
-    button: number,
-    img: string | string[],
-    description: string,
-    url:string,
-    techno: string[],
-} | undefined
 
-/*type projectTechno = string[]*/
 
-const modalProjects: ProjectsType = [
+function Modal({id, closeModal, url, description}: modalProps) {
 
-    {
-        id: 2,
-        title: "Project Kasa",
-        text: "I create a travel agency homepage for a fictive company who wants to develop a website that allows users to find accommodation and activities in the city of their choice.",
-        button: 2,
-        img: "",
-        description: 'truc',
-        techno: ['Sass', 'javascript', 'react'],
-        url: ''
-    },
-    {
-        id: 4,
-        title: "Project Sophie Bruel",
-        text: "As part of my training, starting from a basic website, I had to create an interface and connect it to the existing API in order to integrate a page showcasing the architect's work.",
-        button: 2,
-        img: gallery,
-        description: 'truc',
-        techno: ['html', 'css', 'javascript'],
-        url: ''
-    },
-    {
-        id: 5,
-        title: "Project Backend",
-        text: "As part of my training, building upon a basic front-end, I developed a REST API using Node.js to manage a grading book system and implemented image optimization during the import process.",
-        button: 2,
-        img: "",
-        description: 'truc',
-        techno: ['javascript', 'NodeJs', 'Mongoose'],
-        url: ''
-    },
-    {
-        id: 6,
-        title: "Project Bookie",
-        text: "I create a travel agency homepage for a fictive company who wants to develop a website that allows users to find accommodation and activities in the city of their choice.",
-        button: 2,
-        img: "",
-        description: 'truc',
-        techno: ['html', 'css'],
-        url: ''
-    },
-    {
-        id: 7,
-        title: "Project optimisation",
-        text: "I create a travel agency homepage for a fictive company who wants to develop a website that allows users to find accommodation and activities in the city of their choice.",
-        button: 2,
-        img: "",
-        description: 'truc',
-        techno: ['html', 'css', 'javascript'],
-        url: ''
-
-    },
-]
-
-function Modal({id, closeModal}: modalProps) {
-    console.log('images', gallery)
     const [index, setIndex] = useState(1)
-
-    const theProject: theProjectype = modalProjects.find(project => project.id === id);
-
-    if (!theProject) {
-        return null;
-    }
-    const TechnoProjet = theProject.techno.map((techno) => <p>{techno}</p>)
 
     /*const theProjectImg: string[] | string = theProject.img;*/
 
     function HandleIndex() {
+        setIsAnimationEnabled(true)
         index == 1 ? setIndex(2) : setIndex(1);
         console.log(index)
     }
+    const [isAnimationEnabled, setIsAnimationEnabled] = useState(false);
+    const [isIframeLoading, setIsIframeLoading] = useState(true);
+
 
     return (
         <>
@@ -121,23 +45,28 @@ function Modal({id, closeModal}: modalProps) {
                    style={{right: '20px'}}
                    onClick={HandleIndex}>
                     <span>Look the description</span> {carrouselIcon}</p>
-                <h2>{theProject.title}</h2>
+                <h2>{'truc'}</h2>
 
                 {/* <div className="carrouselProjct">
 
                      <img src={theProjectImg[0]} alt=""/> <span>{carrouselIcon}</span></div>*/}
                 <div style={{display: 'flex', width: "100%", height: '100%'}}>
-                    <iframe className={index == 1 ? 'iframeNav' : 'NotIframeNav'} src="https://betclim.fr/" width="100%"
+
+                    <div  style={isIframeLoading ? {width:'100%', height:'100%',position:"absolute", backgroundImage:`url(${loading})`,backgroundPosition:'center',transform:'translate' ,backgroundSize:'25%',backgroundRepeat:'no-repeat', borderRadius:'20px' } : {display:'none'} }></div>
+
+                    <iframe onLoad={()=> setIsIframeLoading(false)} style={isAnimationEnabled ? {backgroundColor:"white"} : {animation:'0.0s'}} className={index == 1 ? 'iframeNav' : 'NotIframeNav'} src={url} width="100%"
                             height="100%"></iframe>
+
+
                     <p className={index == 2 ? 'descriptionNav' : 'NotDescriptionNav'} style={{
 
                         width: "100%",
                         height: "100%"
-                    }}>{theProject.description}</p>
+                    }}>{description}</p>
                 </div>
 
 
-                <div className="technoInProject">{TechnoProjet}</div>
+                <div className="technoInProject">{'truc'}</div>
 
 
             </div>

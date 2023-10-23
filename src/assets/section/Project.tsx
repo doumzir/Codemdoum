@@ -14,45 +14,62 @@ const projects = [
         id: 1,
         title: "Betclim",
         text: "I built the Betclim company website from A to Z, from design to deployment, using Figma, Photoshop, and WordPress. I utilized JavaScript to add dynamism to the pages.",
-        button: 1,
+        description: 'truc',
+
+    button: 1,
         url: "https://betclim.fr/"
     },
     {
         id: 2,
         title: "Project Kasa",
         text: "I create a travel agency homepage for a fictive company who wants to develop a website that allows users to find accommodation and activities in the city of their choice.",
+        description: 'truc',
+
         button: 2,
+        url:"https://kaba-react-qhx6.vercel.app/"
     },
     {
         id: 3,
-        title: "Upgrade",
+        title: "UpgradeFormation",
         text: "I built the Upgrade company website from A to Z, from design to deployment, using Figma, Photoshop, and Illustrator for design. JavaScript Vanilla, Html/CSS and PHP to build website",
         button: 1,
-        url: "https://betclim.fr/"
+        description: 'truc',
+
+        url: "https://upgradeformation.fr/"
     },
     {
         id: 4,
         title: "Project Sophie Bruel",
         text: "As part of my training, starting from a basic website, I had to create an interface and connect it to the existing API in order to integrate a page showcasing the architect's work.",
         button: 2,
+        description: 'truc',
+
     },
     {
         id: 5,
         title: "Project Backend",
         text: "As part of my training, building upon a basic front-end, I developed a REST API using Node.js to manage a grading book system and implemented image optimization during the import process.",
         button: 2,
+        description: 'truc',
+
     },
     {
         id: 6,
         title: "Project Bookie",
         text: "I create a travel agency homepage for a fictive company who wants to develop a website that allows users to find accommodation and activities in the city of their choice.",
         button: 2,
+        description: 'truc',
+
+        url:'https://booki-fawn.vercel.app/'
     },
     {
         id: 7,
         title: "Project optimisation",
         text: "I create a travel agency homepage for a fictive company who wants to develop a website that allows users to find accommodation and activities in the city of their choice.",
         button: 2,
+        description: 'truc',
+
+        url:'https://doumzir.github.io/'
     },
 
 
@@ -75,6 +92,7 @@ const Project = () => {
             id={project.id}
             title={project.title}
             Button={project.button}
+            description={project.description}
             url={project.url}
         >
             {project.text}

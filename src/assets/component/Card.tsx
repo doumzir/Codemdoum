@@ -9,9 +9,10 @@ type CardProps = PropsWithChildren<{
     Button:number;
     id:number;
     url: string | undefined;
+    description: string,
 
 }>;
-const Card = ({title, children, url, Button, id} : CardProps) => {
+const Card = ({title, children, url, Button, id, description} : CardProps) => {
     return (
         <div id={id+"div"} className={Button == 1 ? "card perso" : "card pro"}>
 
@@ -29,7 +30,7 @@ const Card = ({title, children, url, Button, id} : CardProps) => {
 
             </div>
             <p>{children}</p>
-            <ButtonType text={Button} id={id} url={url}/>
+            <ButtonType text={Button} id={id} url={url} description={description}/>
 
 
 

@@ -1,6 +1,6 @@
 import TextType from "../component/TextType";
 import "../style/Stack.scss"
-import iconJavascript from "../image/icon/JS icon.svg"
+import iconTypescript from "../image/icon/Typescript_logo.svg"
 import reactIcon from "../image/icon/React-icon.svg"
 import scssIcon  from "../image/icon/Sass_Logo_Color.svg"
 import nodeJSIcon from '../image/icon/Node.js_logo.svg'
@@ -10,8 +10,8 @@ import packageManger from "../image/icon/Packagemanager.svg"
 const myStack = [
     {
         id:1,
-        stackName: "JavaScript",
-        icon: iconJavascript,
+        stackName: "TypeScript",
+        icon: iconTypescript,
     },
     {
         id:2,

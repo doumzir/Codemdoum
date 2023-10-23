@@ -8,8 +8,9 @@ type textButton = {
     text: number,
     id: number,
     url: string | undefined ,
+    description : string,
 }
-const ButtonType = ({text, url, id}: textButton) => {
+const ButtonType = ({text, url, id, description}: textButton) => {
     const [showModal, setShowModal] = useState(false)
     console.log(showModal)
     return (
@@ -19,11 +20,10 @@ const ButtonType = ({text, url, id}: textButton) => {
                                 href="#Project" >see my projects</a> :
 
         <div>
-            {text == 1 ? <a target="_blank" className="button"
-                            href={url}>see Website</a> : <><button
+            { <><button
                 onClick={() => setShowModal(true)}
                 className="button">More Detail</button>
-            {showModal && createPortal(<Modal closeModal={()=> setShowModal(false)} id={id} />, document.body)}</>}
+            {showModal && createPortal(<Modal closeModal={()=> setShowModal(false)} url={url} id={id} description={description} />, document.body)}</>}
 
         </div> }
         </>
