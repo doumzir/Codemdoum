@@ -1,7 +1,7 @@
 import TextType from "../component/TextType";
 import '../style/contact.scss'
 
-import {FormEventHandler, LegacyRef, MutableRefObject, useRef, useState} from 'react';
+import {FormEventHandler, useRef, useState} from 'react';
 import emailjs, {EmailJSResponseStatus} from '@emailjs/browser';
 import me from '../image/me.jpg'
 import LinkSocialMedia from "../component/LinkSocialMedia";
