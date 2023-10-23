@@ -1,7 +1,7 @@
 import TextType from "../component/TextType";
 import '../style/contact.scss'
 
-import {FormEventHandler, MutableRefObject, useRef, useState} from 'react';
+import {FormEventHandler, LegacyRef, MutableRefObject, useRef, useState} from 'react';
 import emailjs, {EmailJSResponseStatus} from '@emailjs/browser';
 import me from '../image/me.jpg'
 import LinkSocialMedia from "../component/LinkSocialMedia";
@@ -14,7 +14,7 @@ const Contact = () => {
     const [message, setMessage] = useState('')
     const [FormEnd, setFormEnd] = useState(false)
 
-    const form:MutableRefObject<any> = useRef();
+    const form:any= useRef();
 
 
     const sendEmail: FormEventHandler<HTMLFormElement> = (e:React.ChangeEvent<HTMLFormElement>) => {
