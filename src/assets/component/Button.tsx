@@ -24,7 +24,7 @@ const ButtonType = ({text, url, id, description}: textButton) => {
             { <><button
                 onClick={() => setShowModal(true)}
                 className="button">More Detail</button>
-            {showModal && createPortal(<Modal closeModal={()=> setShowModal(false)} url={url} id={id} description={description} />, document.body)}</>}
+            {showModal && createPortal(<Modal closeModal={()=> setShowModal(false)} url={url? url : ''} id={id} description={description? description : ''} />, document.body)}</>}
 
         </div> }
         </>
