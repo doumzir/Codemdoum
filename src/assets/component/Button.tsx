@@ -5,14 +5,15 @@ import {createPortal} from "react-dom";
 import Modal from "./Modal";
 
 type textButton = {
-    text: number,
+    text?: number,
     id: number,
-    url: string | undefined ,
-    description : string,
+    url?: string ,
+    description? : string,
 }
 const ButtonType = ({text, url, id, description}: textButton) => {
     const [showModal, setShowModal] = useState(false)
     console.log(showModal)
+
     return (
         <>
             {
