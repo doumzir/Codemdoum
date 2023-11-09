@@ -14,9 +14,8 @@ const projects = [
         id: 1,
         title: "Betclim",
         text: "I built the Betclim company website from A to Z, from design to deployment, using Figma, Photoshop, and WordPress. I utilized JavaScript to add dynamism to the pages.",
-        description: 'truc',
-
-    button: 1,
+        description: 'During my training, I had the opportunity to be paid by the companies Betclim and Upgrade Formation, where I split my time between training and working in the company. During this year, I was able to create a website for Betclim. I initially built a first version using WordPress to quickly establish an online presence. Later on, I developed a second version using NextJS, Sass, TypeScript, and NodeJS (TS). To create this second version, I started by using Figma and Photoshop for basic designs and mockups. Once I had gathered enough design elements, I transitioned directly to programming.This experience allowed me to learn about the Next.js environment, deployment on Vercel, and to enhance my skills in TypeScript and React in general.',
+        button: 1,
         url: "https://betclim.fr/"
     },
     {
@@ -26,7 +25,7 @@ const projects = [
         description: 'truc',
 
         button: 2,
-        url:"https://kaba-react-qhx6.vercel.app/"
+        url: "https://kaba-react-qhx6.vercel.app/"
     },
     {
         id: 3,
@@ -60,7 +59,7 @@ const projects = [
         button: 2,
         description: 'truc',
 
-        url:'https://booki-fawn.vercel.app/'
+        url: 'https://booki-fawn.vercel.app/'
     },
     {
         id: 7,
@@ -69,7 +68,7 @@ const projects = [
         button: 2,
         description: 'truc',
 
-        url:'https://doumzir.github.io/'
+        url: 'https://doumzir.github.io/'
     },
 
 
@@ -97,13 +96,14 @@ const Project = () => {
         >
             {project.text}
         </Card>))
-console.log(projectDisplay)
+    console.log(projectDisplay)
     const handleCategoryChange = (category: string) => {
         setSelectedCategory(category);
     };
     return (
         <section id="Project">
-            <TextType presentation={false} Title={"Look at this 👀"}>Some of my recent projects professionals and personals/casual</TextType>
+            <TextType presentation={false} Title={"Look at this 👀"}>Some of my recent projects professionals and
+                personals/casual</TextType>
             <p className="chooseCategory">Choose your category {icon}</p>
             <Filter stateCategory={handleCategoryChange} selectedCategory={selectedCategory}/>
             <div className="projectContainer">

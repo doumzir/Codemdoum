@@ -157,6 +157,8 @@ animation: iframeNav 0.2s linear;
 
     animation: descriptionNav 0.2s linear;
     display: flex;
+    flex-direction: column;
+    text-align: center;
   }
   .NotDescriptionNav{
     display: none;

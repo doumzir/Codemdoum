@@ -15,7 +15,7 @@ const Contact = () => {
     const [FormEnd, setFormEnd] = useState(false)
 
     const form:any= useRef();
-
+console.log(form)
 
     const sendEmail: FormEventHandler<HTMLFormElement> = (e:React.ChangeEvent<HTMLFormElement>) => {
         e.preventDefault();

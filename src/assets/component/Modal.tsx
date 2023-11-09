@@ -58,11 +58,31 @@ function Modal({id, closeModal, url, description}: modalProps) {
                             height="100%"></iframe>
 
 
-                    <p className={index == 2 ? 'descriptionNav' : 'NotDescriptionNav'} style={{
+                    <div className={index == 2 ? 'descriptionNav' : 'NotDescriptionNav'} style={{
 
                         width: "100%",
                         height: "100%"
-                    }}>{description}</p>
+                    }}><p>{description}</p>
+                    
+
+                        <table style={{marginTop:'20px'}}>
+                            <thead>
+                            <tr>
+                                <th>Problems during the  process</th>
+                                <th>How i solve the  problemes</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>For the first Wordpress website i need to understand the business plan and get image, texts, process/state aid  and the entire </td>
+                                <td>I doing my best xD</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+
+                    
+                    </div>
                 </div>
 
 
