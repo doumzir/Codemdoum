@@ -9,8 +9,7 @@ const Experience = () => {
         {Plants: "Betclim",
             job:"Web developer Full Stack",
             years:[2022, 2023],
-            text: "\n" +
-                "I branded and developed a complete React web application for Betclim, a company specializing in home energy. I initially created a simplified version using WordPress and then a more advanced one using NextJS with TypeScript to showcase its services.",
+            text: "I branded and developed a complete React web application for Betclim, a company specializing in home energy. I initially created a simplified version using WordPress and then a more advanced one using NextJS with TypeScript to showcase its services.",
             task : ["NextJs","TypeScript","Sass","Photoshop / Illustrator","Wordpress"],
             logo: betclimLogo,
             color: "#3396D8"
