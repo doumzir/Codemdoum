@@ -15,16 +15,18 @@ const xmark = <FontAwesomeIcon icon={faCircleXmark} style={{color: "#ffffff",}}/
 type modalProps = {
     id: number;
     closeModal: () => void;
-    url:string
-    description:string
+    url:string,
+    description:string,
+    title?:string,
+    projectTechno?:string[]
 }
 
 
 
-function Modal({id, closeModal, url, description}: modalProps) {
+function Modal({id, closeModal, url, description,title,projectTechno}: modalProps) {
 
     const [index, setIndex] = useState(1)
-
+    const project = projectTechno? projectTechno.map(projet => <li>{projet}</li>) : undefined
     /*const theProjectImg: string[] | string = theProject.img;*/
 
     function HandleIndex() {
@@ -45,7 +47,7 @@ function Modal({id, closeModal, url, description}: modalProps) {
                    style={{right: '20px'}}
                    onClick={HandleIndex}>
                     <span>Look the description</span> {carrouselIcon}</p>
-                <h2>{'truc'}</h2>
+                <h2>{title}</h2>
 
                 {/* <div className="carrouselProjct">
 
@@ -86,7 +88,7 @@ function Modal({id, closeModal, url, description}: modalProps) {
                 </div>
 
 
-                <div className="technoInProject">{'truc'}</div>
+                <ul className="technoInProject">{project}</ul>
 
 
             </div>

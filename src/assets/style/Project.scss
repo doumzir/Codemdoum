@@ -11,6 +11,10 @@
     justify-content: space-evenly;
     overflow-x: hidden;
     padding: 20px 0;
+    .projetDescription{
+      margin-top:20px ;
+      margin-bottom: 10px;
+    }
     @media screen and (max-width: 780px) {
       padding-right: 40px;
     }

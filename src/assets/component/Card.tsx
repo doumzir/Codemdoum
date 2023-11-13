@@ -10,9 +10,10 @@ type CardProps = PropsWithChildren<{
     id:number;
     url: string | undefined;
     description: string,
+    projetTechno:string[],
 
 }>;
-const Card = ({title, children, url, Button, id, description} : CardProps) => {
+const Card = ({title, children, url, Button, id, description, projetTechno} : CardProps) => {
     return (
         <div id={id+"div"} className={Button == 1 ? "card perso" : "card pro"}>
 
@@ -26,11 +27,11 @@ const Card = ({title, children, url, Button, id, description} : CardProps) => {
                         </g>
                     </g>
                 </svg>
-            <p style={Button == 1? {backgroundColor:"#3498DB"}:{backgroundColor:"#1ABC9C"}}>{Button == 1?  "Professional" : "Personal"}</p>
+            <p style={Button == 1? {backgroundColor:"#3498DB"}:{backgroundColor:"#1ABC9C"}} >{Button == 1?  "Professional" : "Personal"}</p>
 
             </div>
-            <p>{children}</p>
-            <ButtonType text={Button} id={id} url={url} description={description}/>
+            <p className="projetDescription">{children}</p>
+            <ButtonType title={title} text={Button} id={id} url={url} projectTechno={projetTechno} description={description}/>
 
 
 
