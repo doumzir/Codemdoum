@@ -17,17 +17,17 @@ const projects = [
         description: 'During my training, I had the opportunity to be paid by the companies Betclim and Upgrade Formation, where I split my time between training and working in the company. During this year, I was able to create a website for Betclim. I initially built a first version using WordPress to quickly establish an online presence. Later on, I developed a second version using NextJS, Sass, TypeScript, and NodeJS (TS). To create this second version, I started by using Figma and Photoshop for basic designs and mockups. Once I had gathered enough design elements, I transitioned directly to programming.This experience allowed me to learn about the Next.js environment, deployment on Vercel, and to enhance my skills in TypeScript and React in general.',
         button: 1,
         url: "https://betclim.fr/",
-        technoProjet:['Sass','NextJS','TypeScript']
+        technoProjet: ['Sass', 'NextJS', 'TypeScript']
     },
     {
         id: 2,
         title: "Project Kasa",
         text: "I create a travel agency homepage for a fictive company who wants to develop a website that allows users to find accommodation and activities in the city of their choice.",
-        description: 'truc',
+        description: 'As part of my OpenClassroom training, I developed a React application based on a prototype and a given JSON dataset. I built a multi-page web application for housing rentals using React, where I learned various hooks, mastered state management, and gained proficiency in manipulating arrays and lists.',
 
         button: 2,
         url: "https://kaba-react-qhx6.vercel.app/",
-        technoProjet:['Sass','React']
+        technoProjet: ['Sass', 'React']
 
     },
     {
@@ -35,8 +35,8 @@ const projects = [
         title: "UpgradeFormation",
         text: "I built the Upgrade company website from A to Z, from design to deployment, using Figma, Photoshop, and Illustrator for design. JavaScript Vanilla, Html/CSS and PHP to build website",
         button: 1,
-        description: 'truc',
-        technoProjet:['Javascript','Html','Css','Php'],
+        description: 'During my training, I had the opportunity to work and receive compensation from Betclim and Upgrade Formation, dividing my time between training and hands-on work at the companies. Throughout the year, I created a website for Upgrade Formation. I began by branding the company, which initially lacked a distinct design, and then I designed a prototype using Figma and Photoshop. Subsequently, I integrated the website using HTML, CSS, JavaScript, and PHP.',
+        technoProjet: ['Javascript', 'Html', 'Css', 'Php'],
         url: "https://upgradeformation.fr/"
     },
     {
@@ -44,8 +44,8 @@ const projects = [
         title: "Project Sophie Bruel",
         text: "As part of my training, starting from a basic website, I had to create an interface and connect it to the existing API in order to integrate a page showcasing the architect's work.",
         button: 2,
-        description: 'truc',
-        technoProjet:['Sass','React']
+        description: 'During my training, starting with a basic backend, API, and a prototype, I was tasked with developing the frontend while adhering to the Figma prototype. Firstly, I created a project presentation page and implemented a category filter for the projects in JavaScript, allowing them to be filtered with a click. Next, I coded the login page, initially integrating it based on the prototype and later working on authentication and redirection. Upon successful login, I incorporated certain visible elements to trigger a modal, which I also integrated. Once the modal was open, I implemented a dynamic JavaScript form for adding and modifying projects, interacting with the API based on the received response, and providing the ability to delete projects.',
+        technoProjet: ['NodeJS', 'Javascript',]
 
     },
     {
@@ -54,7 +54,7 @@ const projects = [
         text: "As part of my training, building upon a basic front-end, I developed a REST API using Node.js to manage a grading book system and implemented image optimization during the import process.",
         button: 2,
         description: 'truc',
-        technoProjet:['Sass','React']
+        technoProjet: ['Sass', 'React']
 
     },
     {
@@ -63,7 +63,7 @@ const projects = [
         text: "I create a travel agency homepage for a fictive company who wants to develop a website that allows users to find accommodation and activities in the city of their choice.",
         button: 2,
         description: 'truc',
-        technoProjet:['Sass','React'],
+        technoProjet: ['Sass', 'React'],
 
         url: 'https://booki-fawn.vercel.app/'
     },
@@ -73,7 +73,7 @@ const projects = [
         text: "Conducted a thorough website audit for photographer Nina Carducci, optimizing performance and SEO. Addressed client requests by resolving technical issues. Implemented ongoing enhancements, including HTML restructuring and meta tag optimization, to improve overall online visibility.",
         button: 2,
         description: 'As part of my training, I conducted a comprehensive audit to enhance the performance and SEO of photographer Nina Carducci\'s website. Using web tools such as WAVE and Lighthouse, I optimized the site to eliminate loading delays and improve the speed of image display. Additionally, in response to the client\'s request, I addressed two minor technical issues affecting the proper functioning of the site. Finally, in an ongoing optimization effort, I worked on meta tags using schema.org and Open Graph tags to improve the photographer\'s SEO and visibility on the internet.',
-        technoProjet:['Sass','React'],
+        technoProjet: ['Sass', 'React'],
 
         url: 'https://doumzir.github.io/'
     },

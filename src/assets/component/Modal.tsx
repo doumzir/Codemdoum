@@ -3,7 +3,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faChevronRight} from "@fortawesome/free-solid-svg-icons";
 import {faCircleXmark} from '@fortawesome/free-regular-svg-icons';
 import {useState} from "react";
-import loading from '../image/load/loading.gif'
+import loading from '../image/load/loading.gif';
 /*
 const gallery = Object.values(import.meta.glob('..//image/project/Kasa/*.{png,jpg,jpeg,PNG,JPEG,webp}', {
     eager: true,
