@@ -45,7 +45,7 @@ const projects = [
         text: "As part of my training, starting from a basic website, I had to create an interface and connect it to the existing API in order to integrate a page showcasing the architect's work.",
         button: 2,
         description: 'During my training, starting with a basic backend, API, and a prototype, I was tasked with developing the frontend while adhering to the Figma prototype. Firstly, I created a project presentation page and implemented a category filter for the projects in JavaScript, allowing them to be filtered with a click. Next, I coded the login page, initially integrating it based on the prototype and later working on authentication and redirection. Upon successful login, I incorporated certain visible elements to trigger a modal, which I also integrated. Once the modal was open, I implemented a dynamic JavaScript form for adding and modifying projects, interacting with the API based on the received response, and providing the ability to delete projects.',
-        technoProjet: ['NodeJS', 'Javascript',]
+        technoProjet: ['Javascript', 'Html', 'CSS'],
 
     },
     {
@@ -53,22 +53,13 @@ const projects = [
         title: "Project Backend",
         text: "As part of my training, building upon a basic front-end, I developed a REST API using Node.js to manage a grading book system and implemented image optimization during the import process.",
         button: 2,
-        description: 'truc',
-        technoProjet: ['Sass', 'React']
+        description: 'For this project, my task was to develop the backend of a book rating website. I began by creating my Express server and then constructed my API (CRUD) with MongoDB. Once I established the routes and connected my Express application to the NoSQL database, I focused on authentication and encryption of private information. Finally, I handled user file management in the application, paying attention to optimizing the uploaded images, and implemented a book rating system based on overall user ratings.',
+        technoProjet: ['NodeJS', 'Express', 'Mongoose'],
 
     },
+
     {
         id: 6,
-        title: "Project Bookie",
-        text: "I create a travel agency homepage for a fictive company who wants to develop a website that allows users to find accommodation and activities in the city of their choice.",
-        button: 2,
-        description: 'truc',
-        technoProjet: ['Sass', 'React'],
-
-        url: 'https://booki-fawn.vercel.app/'
-    },
-    {
-        id: 7,
         title: "Project optimisation",
         text: "Conducted a thorough website audit for photographer Nina Carducci, optimizing performance and SEO. Addressed client requests by resolving technical issues. Implemented ongoing enhancements, including HTML restructuring and meta tag optimization, to improve overall online visibility.",
         button: 2,
@@ -84,7 +75,8 @@ const projects = [
 
 const Project = () => {
     const [selectedCategory, setSelectedCategory] = useState("All"); // Par défaut, "All" est sélectionné
-    const [indexArray, setIndexArray] = useState(4);
+    const [indexArray, setIndexArray] = useState(3);
+    console.log(projects.length)
     const filteredProjects = selectedCategory === "All"
         ? projects
         : projects.filter(project =>
@@ -115,11 +107,14 @@ const Project = () => {
             <p className="chooseCategory">Choose your category {icon}</p>
             <Filter stateCategory={handleCategoryChange} selectedCategory={selectedCategory}/>
             <div className="projectContainer">
-                {projectDisplay.length < 4 ? projectDisplay.slice(0, 4) : projectDisplay.slice((indexArray - 4), indexArray)}
+                {projectDisplay.length <= 3 ? projectDisplay.slice(0, 3) : projectDisplay.slice((indexArray - 3), indexArray)}
             </div>
-            <p className={projectDisplay.length > 4 ? "carrousel" : "noneCarrousel"}><span
-                onClick={() => indexArray - 4 > 0 ? setIndexArray(indexArray - 4) : setIndexArray(projectDisplay.length + (4 - (projectDisplay.length % 4)))}>{carrouselIcon}</span>{Math.floor(indexArray / 4)}/{Math.floor((projectDisplay.length + 4) / 4)}<span
-                onClick={() => indexArray < projectDisplay.length ? setIndexArray(indexArray + 4) : setIndexArray(4)}>{carrouselIcon}</span>
+            <p className={projectDisplay.length > 3 ? "carrousel" : "noneCarrousel"}>
+                <span
+                    onClick={() => indexArray - 3 > 0 ? setIndexArray(indexArray - 3) : setIndexArray(projectDisplay.length + (3 - (projectDisplay.length % 3)))}>{carrouselIcon}</span>
+                {Math.floor(indexArray / 3)}/{Math.floor((projectDisplay.length +2) / 3)}
+                <span
+                    onClick={() => indexArray < projectDisplay.length ? setIndexArray(indexArray + 3) : setIndexArray(3)}>{carrouselIcon}</span>
             </p>
         </section>
     );
