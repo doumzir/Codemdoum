@@ -55,6 +55,7 @@ const projects = [
         button: 2,
         description: 'For this project, my task was to develop the backend of a book rating website. I began by creating my Express server and then constructed my API (CRUD) with MongoDB. Once I established the routes and connected my Express application to the NoSQL database, I focused on authentication and encryption of private information. Finally, I handled user file management in the application, paying attention to optimizing the uploaded images, and implemented a book rating system based on overall user ratings.',
         technoProjet: ['NodeJS', 'Express', 'Mongoose'],
+        url:'https://mon-vieux-grimoire.vercel.app',
 
     },
 
@@ -66,7 +67,7 @@ const projects = [
         description: 'As part of my training, I conducted a comprehensive audit to enhance the performance and SEO of photographer Nina Carducci\'s website. Using web tools such as WAVE and Lighthouse, I optimized the site to eliminate loading delays and improve the speed of image display. Additionally, in response to the client\'s request, I addressed two minor technical issues affecting the proper functioning of the site. Finally, in an ongoing optimization effort, I worked on meta tags using schema.org and Open Graph tags to improve the photographer\'s SEO and visibility on the internet.',
         technoProjet: ['Sass', 'React'],
 
-        url: 'https://doumzir.github.io/'
+        url: 'https://doumzir.github.io/',
     },
 
 
