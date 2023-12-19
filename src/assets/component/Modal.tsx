@@ -18,13 +18,14 @@ type modalProps = {
     url:string,
     description:string,
     title?:string,
-    projectTechno?:string[]
+    projectTechno?:string[],
+    arraySolving: { Problem:string, Solution:string }[],
 }
 
 
 
-function Modal({id, closeModal, url, description,title,projectTechno}: modalProps) {
-
+function Modal({id, closeModal, url, description,title,projectTechno,arraySolving}: modalProps) {
+const arrayProblem = arraySolving.map((problem)=> <tr> <td>{problem.Problem}</td> <td>{problem.Solution}</td></tr>)
     const [index, setIndex] = useState(1)
     const project = projectTechno? projectTechno.map(projet => <li>{projet}</li>) : undefined
     /*const theProjectImg: string[] | string = theProject.img;*/
@@ -54,7 +55,7 @@ function Modal({id, closeModal, url, description,title,projectTechno}: modalProp
                      <img src={theProjectImg[0]} alt=""/> <span>{carrouselIcon}</span></div>*/}
                 <div style={{display: 'flex', width: "100%", height: '100%'}}>
 
-                    <div  style={isIframeLoading ? {width:'100%', height:'100%',position:"absolute", backgroundImage:`url(${loading})`,backgroundPosition:'center',transform:'translate' ,backgroundSize:'25%',backgroundRepeat:'no-repeat', borderRadius:'20px' } : {display:'none'} }></div>
+                    <div  style={isIframeLoading ? {width:'100%', height:'100%',position:"absolute", backgroundImage:`url(${loading})`,backgroundPosition:'center',transform:'translate' ,backgroundSize:'25%',backgroundRepeat:'no-repeat', borderRadius:'20px', } : {display:'none'} }></div>
 
                     <iframe onLoad={()=> setIsIframeLoading(false)} style={isAnimationEnabled ? {backgroundColor:"white"} : {animation:'0.0s'}} className={index == 1 ? 'iframeNav' : 'NotIframeNav'} src={url} width="100%"
                             height="100%"></iframe>
@@ -63,11 +64,16 @@ function Modal({id, closeModal, url, description,title,projectTechno}: modalProp
                     <div className={index == 2 ? 'descriptionNav' : 'NotDescriptionNav'} style={{
 
                         width: "100%",
-                        height: "100%"
-                    }}><p>{description}</p>
+                        height: "fit-content",
+                        maxHeight:"85%",
+
+                        overflowY:"scroll",
+
+                    }}>
+                        <div className={"content"}> <p>{description}</p>
                     
 
-                        <table style={{marginTop:'20px'}}>
+                        <table className={"problemSolving"}>
                             <thead>
                             <tr>
                                 <th>Problems during the  process</th>
@@ -75,15 +81,14 @@ function Modal({id, closeModal, url, description,title,projectTechno}: modalProp
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>For the first Wordpress website i need to understand the business plan and get image, texts, process/state aid  and the entire </td>
-                                <td>I doing my best xD</td>
-                            </tr>
+
+                                {arrayProblem}
+
                             </tbody>
                         </table>
 
 
-                    
+                        </div>
                     </div>
                 </div>
 

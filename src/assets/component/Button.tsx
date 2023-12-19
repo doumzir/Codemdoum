@@ -11,8 +11,9 @@ type textButton = {
     description? : string,
     title?:string,
     projectTechno?:string[],
+    arraySolving: { Problem:string, Solution:string }[],
 }
-const ButtonType = ({text, url, id, description, title, projectTechno}: textButton) => {
+const ButtonType = ({text, url, id, description, title, projectTechno, arraySolving}: textButton) => {
     const [showModal, setShowModal] = useState(false)
     console.log(showModal)
 
@@ -26,7 +27,7 @@ const ButtonType = ({text, url, id, description, title, projectTechno}: textButt
             { <><button
                 onClick={() => setShowModal(true)}
                 className="button">More Detail</button>
-            {showModal && createPortal(<Modal closeModal={()=> setShowModal(false)} url={url? url : ''} id={id} projectTechno={projectTechno} title={title} description={description? description : ''} />, document.body)}</>}
+            {showModal && createPortal(<Modal closeModal={()=> setShowModal(false)} url={url? url : ''} id={id} arraySolving={arraySolving} projectTechno={projectTechno} title={title} description={description? description : ''} />, document.body)}</>}
 
         </div> }
         </>

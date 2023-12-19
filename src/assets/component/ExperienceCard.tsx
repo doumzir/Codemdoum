@@ -4,12 +4,12 @@ type PropsCardExp = PropsWithChildren<{
     plants:string,
     job:string,
     nbrYears: number[],
-    task: string[],
+    tasks: string[],
     logo: string,
     color:string
 }>
-function ExperienceCard({plants, job, nbrYears, children, task, logo, color} : PropsCardExp) {
-    const taskList = task.map(task => (<li>{task}</li>))
+function ExperienceCard({plants, job, nbrYears, children, tasks, logo, color} : PropsCardExp) {
+    const taskList = tasks.map((task) => <li key={tasks.indexOf(task)}>{task}</li>)
     return (<>
 
         <div className="experienceCard" style={{background:`linear-gradient(180deg, ${color} 0% , ${color}33 25% , ${color}00 100%)`}}>

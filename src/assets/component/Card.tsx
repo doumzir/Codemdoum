@@ -11,9 +11,11 @@ type CardProps = PropsWithChildren<{
     url: string | undefined;
     description: string,
     projetTechno:string[],
+    arraySolving: { Problem:string, Solution:string }[],
+
 
 }>;
-const Card = ({title, children, url, Button, id, description, projetTechno} : CardProps) => {
+const Card = ({title, children, url, Button, id, description, projetTechno, arraySolving} : CardProps) => {
     return (
         <div id={id+"div"} className={Button == 1 ? "card perso" : "card pro"}>
 
@@ -31,7 +33,7 @@ const Card = ({title, children, url, Button, id, description, projetTechno} : Ca
 
             </div>
             <p className="projetDescription">{children}</p>
-            <ButtonType title={title} text={Button} id={id} url={url} projectTechno={projetTechno} description={description}/>
+            <ButtonType title={title} text={Button} id={id} url={url} projectTechno={projetTechno} description={description} arraySolving={arraySolving}/>
 
 
 

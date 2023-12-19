@@ -5,7 +5,7 @@ import dualLogo from "../image/icon/logPLants/dualpublogowhite.svg"
 import ExperienceCard from "../component/ExperienceCard";
 import "../style/experience.scss";
 const Experience = () => {
-    const profession =  [
+    const professions =  [
         {Plants: "Betclim",
             job:"Web developer Full Stack",
             years:[2022, 2023],
@@ -32,7 +32,7 @@ const Experience = () => {
             color: "#009DD9"
         }
     ]
-    const ProfessionList = profession.map(profession => (<ExperienceCard plants={profession.Plants} key={profession.years[0]} logo={profession.logo} task={profession.task} job={profession.job} nbrYears={profession.years} color={profession.color}>{profession.text}</ExperienceCard>))
+    const ProfessionList = professions.map(profession => (<ExperienceCard plants={profession.Plants} key={professions.indexOf(profession)} logo={profession.logo} tasks={profession.task} job={profession.job} nbrYears={profession.years} color={profession.color}>{profession.text}</ExperienceCard>))
     return (
         <section id="Experience">
             <TextType presentation={false} Title="Where I cooked ? 💼">My experiences in differents companies</TextType>
