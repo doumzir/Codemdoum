@@ -65,7 +65,7 @@ const arrayProblem = arraySolving.map((problem)=> <tr> <td>{problem.Problem}</td
 
                         width: "100%",
                         height: "fit-content",
-                        maxHeight:"85%",
+                        maxHeight:"75%",
 
                         overflowY:"scroll",
 
