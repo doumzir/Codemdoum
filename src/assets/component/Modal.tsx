@@ -19,13 +19,14 @@ type modalProps = {
     description:string,
     title?:string,
     projectTechno?:string[],
-    arraySolving: { Problem:string, Solution:string }[],
+    arraySolving?: { Problem:string, Solution:string }[],
 }
 
 
 
 function Modal({id, closeModal, url, description,title,projectTechno,arraySolving}: modalProps) {
-const arrayProblem = arraySolving.map((problem)=> <tr> <td>{problem.Problem}</td> <td>{problem.Solution}</td></tr>)
+
+const arrayProblem = arraySolving ? arraySolving.map((problem)=> <tr> <td>{problem.Problem}</td> <td>{problem.Solution}</td></tr>) : ""
     const [index, setIndex] = useState(1)
     const project = projectTechno? projectTechno.map(projet => <li>{projet}</li>) : undefined
     /*const theProjectImg: string[] | string = theProject.img;*/

@@ -11,7 +11,7 @@ type textButton = {
     description? : string,
     title?:string,
     projectTechno?:string[],
-    arraySolving: { Problem:string, Solution:string }[],
+    arraySolving?: { Problem:string, Solution:string }[],
 }
 const ButtonType = ({text, url, id, description, title, projectTechno, arraySolving}: textButton) => {
     const [showModal, setShowModal] = useState(false)
