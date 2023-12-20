@@ -99,7 +99,7 @@ const projects = [
         text: "Conducted a thorough website audit for photographer Nina Carducci, optimizing performance and SEO. Addressed client requests by resolving technical issues. Implemented ongoing enhancements, including HTML restructuring and meta tag optimization, to improve overall online visibility.",
         button: 2,
         description: 'As part of my training, I conducted a comprehensive audit to enhance the performance and SEO of photographer Nina Carducci\'s website. Using web tools such as WAVE and Lighthouse, I optimized the site to eliminate loading delays and improve the speed of image display. Additionally, in response to the client\'s request, I addressed two minor technical issues affecting the proper functioning of the site. Finally, in an ongoing optimization effort, I worked on meta tags using schema.org and Open Graph tags to improve the photographer\'s SEO and visibility on the internet.',
-        technoProjet: ['Sass', 'React'],
+        technoProjet: ['Semantic', 'Shema.org', 'SEO', 'Lighthouse '],
         url: 'https://doumzir.github.io/',
         arraySolving:[ {Problem: 'No specific issues encountered.',
                 Solution: 'No problems were encountered during the project.'},
