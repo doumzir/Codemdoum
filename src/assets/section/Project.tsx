@@ -34,7 +34,6 @@ const projects = [
         title: "Project Kasa",
         text: "I create a travel agency homepage for a fictive company who wants to develop a website that allows users to find accommodation and activities in the city of their choice.",
         description: 'As part of my OpenClassroom training, I developed a React application based on a prototype and a given JSON dataset. I built a multi-page web application for housing rentals using React, where I learned various hooks, mastered state management, and gained proficiency in manipulating arrays and lists.',
-
         button: 2,
         url: "https://kaba-react-qhx6.vercel.app/",
         technoProjet: ['Sass', 'React'],
@@ -102,14 +101,8 @@ const projects = [
         description: 'As part of my training, I conducted a comprehensive audit to enhance the performance and SEO of photographer Nina Carducci\'s website. Using web tools such as WAVE and Lighthouse, I optimized the site to eliminate loading delays and improve the speed of image display. Additionally, in response to the client\'s request, I addressed two minor technical issues affecting the proper functioning of the site. Finally, in an ongoing optimization effort, I worked on meta tags using schema.org and Open Graph tags to improve the photographer\'s SEO and visibility on the internet.',
         technoProjet: ['Sass', 'React'],
         url: 'https://doumzir.github.io/',
-        arraySolving:[{Problem: 'Redirecting the site without affecting certain software using the same domain or subdomain.',
-            Solution: 'Configure DNS settings on OVH.'},
-            {Problem: 'Hosting the site..',
-                Solution: 'Use Vercel for hosting.'},
-            {Problem: 'Limited time and tight schedule.',
-                Solution: 'Prioritize tasks using a Mindmap and task tree with estimated timeframes. Make concessions when necessary.'},
-            {Problem: 'Finding text, images, and general design elements.',
-                Solution: 'Conduct competitor analysis, use Prompt AI, leverage resources from freepik, and employ Photoshop and Illustrator for design elements.'},
+        arraySolving:[ {Problem: 'No specific issues encountered.',
+                Solution: 'No problems were encountered during the project.'},
 
         ]
     },
