@@ -1,47 +1,81 @@
-header{
-display: flex;
+header {
+  display: flex;
   justify-content: space-between;
-  img{
 
-    @media screen and (max-width:1024px){
+  img {
+
+    @media screen and (max-width: 1024px) {
       width: 200px;
       object-fit: contain;
     }
-    @media screen and (max-width:780px){
+    @media screen and (max-width: 780px) {
       width: 180px;
       object-fit: contain;
-    }}
-  nav{
+    }
+  }
+
+  nav {
     width: 70%;
 
 
   }
+  #xmark{
+    display: none;
+    @media screen and (max-width: 780px) {
+      cursor: pointer;
+      display: block;
+      position: fixed;
+      top: 10px;
+      right: 20px;
+      z-index:4;
+    }
+  }
+
   nav ul {
     display: flex;
     justify-content: space-between;
     width: 100%;
     list-style: none;
-    @media screen and (max-width:720px){
-     display: none;
+
+
+
+    @media screen and (max-width: 720px) {
+      flex-direction: column;
+      position: fixed;
+      z-index: 3;
+      height: 100dvh;
+      background-color: rgba(33, 53, 71, 0.84);
+      top: 0;
+      right: 0;
+      width: 40%;
+      padding: 50px;
+
     }
-    a{
+
+    a {
       color: white;
       padding: 8px 10px;
       border-radius: 10px;
-      @media screen and (max-width:1024px){
+      @media screen and (max-width: 1024px) {
         padding: 8px 5px;
       }
     }
-    a:hover{
+
+    a:hover {
       color: white;
       background-color: #1ABC9C;
 
     }
-    li:last-child a:hover{
 
-      background-color: #9B59B6;}
+    li:last-child a:hover {
+
+      background-color: #9B59B6;
+    }
   }
-
+  nav .hiddenUl{
+    @media screen and (max-width: 720px){
+    display: none;}
+  }
 
 
 }
